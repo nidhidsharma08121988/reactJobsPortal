@@ -12,7 +12,7 @@ export const Hero = ({title, subtitle}) => <section className="bg-indigo-700 py-
         {title}
       </h1>
       <p className="my-4 text-xl text-white">
-{subtitle}
+        {subtitle}
      </p>
     </div>
   </div>
