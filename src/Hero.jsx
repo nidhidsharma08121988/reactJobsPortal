@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 
 
-export const Hero = ({title, subtitle}) => <section className="bg-indigo-700 py-20 mb-4">
+export const Hero = ({title = "React Jobs", subtitle = "Find React Jobs"}) => <section className="bg-indigo-700 py-20 mb-4">
   <div
     className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center"
   >
@@ -23,7 +23,3 @@ Hero.propTypes ={
   subtitle: PropTypes.string,
 }
 
-Hero.defaultProps = {
-  title: "React Jobs",
-  subtitle: "Find React Jobs"
-}
