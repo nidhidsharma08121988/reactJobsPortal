@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
 import  {useState} from 'react';
-
+import {FaMapMarker} from 'react-icons/fa'
  function JobListing({job}) {
 
   const [showFullDescription, setShowFullDescription] = useState(false)
 
   let description = job.description;
- 
-  
   
   if(!showFullDescription){
     description = description.substring(0,90) + "...";
@@ -22,9 +20,9 @@ import  {useState} from 'react';
 
       <div className="mb-5  ">
         <p className="text-wrap">{description}  
-          <button className="mb-5 ml-2 text-indigo-400 hover:text-indigo-600" onClick={()=>setShowFullDescription(!showFullDescription)}> 
+          <button className="mb-5 ml-2 text-indigo-400 hover:text-indigo-600" onClick={()=> setShowFullDescription((prevState)=>!prevState) }> 
             {showFullDescription? 'Less' : 'More'}
-          </button> 
+          </button>
         </p>
       </div>
 
@@ -34,7 +32,7 @@ import  {useState} from 'react';
 
       <div className="flex flex-col lg:flex-row justify-between mb-4">
         <div className="text-orange-700 mb-3">
-          <i className="fa-solid fa-location-dot text-lg"></i>
+          <FaMapMarker className="inline text-lg  mr-1 mb-1"/>
           {job.location}
         </div>
         <a
