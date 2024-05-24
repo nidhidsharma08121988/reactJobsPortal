@@ -1,5 +1,5 @@
 import  JobListing  from "./JobListing";
-import jobs from "./jobListings.json";
+import jobs from "../jobListings.json";
 
 const allJobs = jobs.jobs;
 

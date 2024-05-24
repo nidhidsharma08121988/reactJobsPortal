@@ -1,6 +1,6 @@
 
 import jobs from "../jobListings.json"
-import JobListing from "../JobListing";
+import JobListing from "../components/JobListing";
 const allJobs = jobs.jobs;
 
 const JobsPage = () => {

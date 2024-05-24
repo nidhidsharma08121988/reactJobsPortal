@@ -1,7 +1,7 @@
 
-import {Hero} from "../Hero"
-import { HomeCards } from '../HomeCards';
-import { JobsListing } from '../JobsListings';
+import {Hero} from "../components/Hero"
+import { HomeCards } from '../components/HomeCards';
+import { JobsListing } from '../components/JobsListings';
 import ViewAllJobs from '../ViewAllJobs';
 
 const HomePage = () => {
