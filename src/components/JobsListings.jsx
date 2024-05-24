@@ -24,7 +24,7 @@ export const JobsListing = ({isHome=true})=>{
     }
   }
    fetchJobs()
- },[])
+ },[isHome])
 
 
 
