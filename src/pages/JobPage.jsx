@@ -21,7 +21,7 @@ const JobPage = () => {
             }
         }
         fetchJob()
-    },[job])
+    },[job,id])
 
   return isLoading?  <Spinner loading={isLoading}/> : <JobListing job={job} isJobPage={true}/>;
 };
