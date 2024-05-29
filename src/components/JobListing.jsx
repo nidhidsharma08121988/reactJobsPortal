@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import  {useState} from 'react';
 import {FaMapMarker} from 'react-icons/fa'
 import { Link } from "react-router-dom";
- function JobListing({job}) {
+ function JobListing({job = null, isJobPage = false}) {
 
   const [showFullDescription, setShowFullDescription] = useState(false)
 
@@ -36,12 +36,12 @@ import { Link } from "react-router-dom";
           <FaMapMarker className="inline text-lg  mr-1 mb-1"/>
           {job.location}
         </div>
-        <Link
+        {!isJobPage &&  <Link
           to={`/jobs/${job.id}`}
           className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
         >
           Read More
-        </Link>
+        </Link>}
       </div>
     </div>
   </div>;
@@ -51,4 +51,5 @@ export default JobListing;
 
 JobListing.propTypes = {
   job: PropTypes.object,
+  isJobPage: PropTypes.bool,
 }
